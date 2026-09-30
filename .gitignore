@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+artifacts/
+*.pkl
+.env
+.DS_Store
+.Rhistory
+SPOILER_notebook_issues.md
+*.egg-info/
+build/

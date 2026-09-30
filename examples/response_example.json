@@ -1,0 +1,8 @@
+{
+  "model_version": "2026-09-30T02-00-00_a1b2c3d",
+  "ranking": [
+    {"hotel_id": "H1234", "score": 0.3661, "rank": 1},
+    {"hotel_id": "H1377", "score": 0.1211, "rank": 2},
+    {"hotel_id": "H1012", "score": 0.1083, "rank": 3}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "search": {
+    "days_until_checkin": 45,
+    "stay_length": 7,
+    "device": "mobile",
+    "user_segment": "family"
+  },
+  "hotels": [
+    {"hotel_id": "H1234", "city": "Palma", "stars": 4, "rating": 8.7, "review_count": 812,
+     "price_per_night": 164.0, "distance_to_center_km": 3.1, "has_pool": 1,
+     "breakfast_included": 1, "free_cancellation": 1},
+    {"hotel_id": "H1377", "city": "Palma", "stars": 3, "rating": null, "review_count": 0,
+     "price_per_night": 98.0, "distance_to_center_km": 0.8, "has_pool": 0,
+     "breakfast_included": 0, "free_cancellation": 1},
+    {"hotel_id": "H1012", "city": "Palma", "stars": 5, "rating": 9.1, "review_count": 455,
+     "price_per_night": 310.0, "distance_to_center_km": 6.4, "has_pool": 1,
+     "breakfast_included": 1, "free_cancellation": 0}
+  ]
+}
