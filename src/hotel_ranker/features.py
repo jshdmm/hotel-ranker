@@ -1,6 +1,4 @@
 # Packages
-import os
-import sys
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -69,3 +67,4 @@ if __name__ == '__main__':
 
     X = build_features(df_impressions, {'rating_fill': rating_mean, 'feature_columns': None})
     print(f'Form der Feature Matrix: {X.shape}')
+    print(f"Die Spalten sehen so aus: {X.columns}")
