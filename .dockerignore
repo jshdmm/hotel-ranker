@@ -1,0 +1,19 @@
+# Alles, was nicht ins Image gehoert
+.git
+.venv
+.pytest_cache
+.ruff_cache
+__pycache__
+*.egg-info
+build
+data
+artifacts
+tests
+deploy
+examples
+src/make_data.py
+*.ipynb
+*.pkl
+*.md
+.DS_Store
+.Rhistory
