@@ -1,0 +1,6 @@
+# Module, die nicht in ansible-core stecken (Versionen passen zu ansible-core 2.17)
+collections:
+  - name: community.docker
+    version: ">=5.0.0,<6.0.0"
+  - name: community.general
+    version: ">=10.0.0,<11.0.0"

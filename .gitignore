@@ -9,6 +9,8 @@ SPOILER_notebook_issues.md
 *.egg-info/
 build/
 
-# Caches
+# Build- und Deploy-Artefakte
 .pytest_cache/
 .ruff_cache/
+deploy/ansible/collections/
+deploy/ansible/files/
