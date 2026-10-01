@@ -8,3 +8,7 @@ artifacts/
 SPOILER_notebook_issues.md
 *.egg-info/
 build/
+
+# Caches
+.pytest_cache/
+.ruff_cache/

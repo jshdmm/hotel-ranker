@@ -23,3 +23,10 @@ dev = ["pytest==9.1.1", "httpx==0.28.1", "ruff==0.16.9"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["beliebtheit_v2.ipynb", "src/make_data.py"]
