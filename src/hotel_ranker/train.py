@@ -5,14 +5,15 @@ import platform
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
+
 import joblib
 import numpy as np
 import pandas as pd
 import sklearn
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import ndcg_score, roc_auc_score
-from hotel_ranker.features import build_features, load_impressions
 
+from hotel_ranker.features import build_features, load_impressions
 
 # Paths
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -54,6 +55,7 @@ def train(df_impressions: pd.DataFrame, split_date: str = SPLIT_DATE) -> tuple:
 
     """Function to train the GBM. Gibt Modell und Metadaten zurueck."""
 
+    df_impressions = df_impressions.copy()
     df_impressions["search_date"] = pd.to_datetime(df_impressions.search_date)
 
     # split into train / test based on search timestamp

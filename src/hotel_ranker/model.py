@@ -10,12 +10,12 @@ import sklearn
 
 from hotel_ranker.features import build_features
 
-
 # Paths
 ROOT_DIR = Path(__file__).resolve().parents[2]
 
-# Welches Artefakt geladen wird: per Umgebungsvariable, sonst der 'current'-Symlink
-MODEL_DIR = Path(os.environ.get("MODEL_DIR", ROOT_DIR / "artifacts" / "current"))
+# Welches Artefakt geladen wird: per Umgebungsvariable MODEL_DIR (Docker, Tests),
+# sonst der 'current'-Symlink. Die Variable wird erst in load() gelesen.
+DEFAULT_MODEL_DIR = ROOT_DIR / "artifacts" / "current"
 
 
 class Ranker:
@@ -28,10 +28,10 @@ class Ranker:
         self.version = metadata["version"]
 
     @classmethod
-    def load(cls, model_dir: Path = MODEL_DIR) -> "Ranker":
+    def load(cls, model_dir: Path | None = None) -> "Ranker":
         """Artefakt einmal laden -- beim Start des Service, nicht pro Request."""
 
-        model_dir = Path(model_dir)
+        model_dir = Path(model_dir or os.environ.get("MODEL_DIR", DEFAULT_MODEL_DIR))
         model = joblib.load(model_dir / "model.joblib")
 
         with open(model_dir / "metadata.json") as f:

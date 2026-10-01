@@ -1,8 +1,8 @@
 # Packages
 from pathlib import Path
-import pandas as pd
-import numpy as np
 
+import numpy as np
+import pandas as pd
 
 # Paths
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -37,7 +37,7 @@ def build_features(df_impressions: pd.DataFrame, params: dict) -> pd.DataFrame:
     df_impressions = df_impressions.copy()
 
     # Add fehlende Ratings | Fuellwert kommt aus dem Training, nicht aus diesen Daten
-    df_impressions['rating'] = df_impressions['rating'].fillna(params['rating_fill'])
+    df_impressions['rating'] = df_impressions['rating'].astype(float).fillna(params['rating_fill'])
 
     # ADD features
     df_impressions['price_per_star'] = df_impressions.price_per_night / df_impressions.stars
